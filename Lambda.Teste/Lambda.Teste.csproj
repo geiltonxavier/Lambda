@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTeste.cs" />
+    <Compile Include="EmpresaBusinessTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBusinessTest.cs" />
   </ItemGroup>

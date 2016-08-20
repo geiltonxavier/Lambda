@@ -53,10 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Abstract\IBusiness.cs" />
+    <Compile Include="Business\Abstract\IEmpresaBusiness.cs" />
     <Compile Include="Business\Abstract\IUsuarioBusiness.cs" />
     <Compile Include="Business\Concrete\BaseBusiness.cs" />
+    <Compile Include="Business\Concrete\EmpresaBusiness.cs" />
     <Compile Include="Business\Concrete\UsuarioBusiness.cs" />
     <Compile Include="DI\LambdaNinjectModule.cs" />
+    <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\EntidadeBase.cs" />
     <Compile Include="Entities\Enum\Grupo.cs" />
     <Compile Include="Entities\Usuario.cs" />
