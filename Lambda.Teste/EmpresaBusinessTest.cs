@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Lambda.Core.Business.Abstract;
 using Lambda.Core.Entities;
 using Ninject;
@@ -24,13 +20,19 @@ namespace Lambda.Teste
                 NomeFantasia = "Comercial A",
                 CNPJ = "74846605000134",
                 Telefone = "123456789",
-                DataCriacao = new DateTime(2016,19,8),
+                DataCriacao = new DateTime(2016, 08, 16),
                 Ativo = false
             };
-            //Assertivas
+            //Ações
             empresaBusiness.Inserir(empresa);
 
-            //Açãos
+           
+
+            //Assertivas
+            var empresaPersistida = empresaBusiness.RetornarPorID(empresa.Id);
+            Assert.IsNotNull(empresaPersistida);
+            Assert.AreEqual(empresa.DataFundacao, empresaPersistida.DataFundacao);
+          
 
 
         }

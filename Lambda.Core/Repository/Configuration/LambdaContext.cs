@@ -13,5 +13,7 @@ namespace Lambda.Core.Repository.Configuration
         public LambdaContext():base("LambdaContext") { }
 
         public DbSet<Usuario> Usuario { get; set; }
+
+        public DbSet<Empresa> Empresa { get; set; }
     }
 }

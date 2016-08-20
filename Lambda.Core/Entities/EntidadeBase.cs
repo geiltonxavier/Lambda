@@ -19,8 +19,7 @@ namespace Lambda.Core.Entities
         }
 
         public DateTime DataCriacao { get; set; }
-
-
+        
 
     }
 }
