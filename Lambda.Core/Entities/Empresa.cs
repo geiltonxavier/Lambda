@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace Lambda.Core.Entities
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Informe o nome Fantasia da Empresa")]
+        [DisplayName("Nome Fantasia")]
         public string NomeFantasia { get; set; }
 
         public string CNPJ { get; set; }
@@ -23,7 +25,8 @@ namespace Lambda.Core.Entities
 
         public bool Ativo { get; set; }
 
-        public DateTime DataFundacao { get; set; }
+        [DisplayName("Data de Fundação")]
+        public DateTime? DataFundacao { get; set; }
 
     }
 }

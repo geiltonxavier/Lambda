@@ -59,6 +59,7 @@
     <Compile Include="Business\Concrete\EmpresaBusiness.cs" />
     <Compile Include="Business\Concrete\UsuarioBusiness.cs" />
     <Compile Include="DI\LambdaNinjectModule.cs" />
+    <Compile Include="DTO\ResultadoSimplesDTO.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\EntidadeBase.cs" />
     <Compile Include="Entities\Enum\Grupo.cs" />
