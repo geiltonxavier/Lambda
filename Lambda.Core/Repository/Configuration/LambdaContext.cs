@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lambda.Core.Repository.Configuration
 {
-    class LambdaContext : DbContext
+    public class LambdaContext : DbContext
     {
         public LambdaContext():base("LambdaContext") { }
 

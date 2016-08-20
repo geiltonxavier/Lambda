@@ -37,6 +37,7 @@ namespace Lambda.Core.Repository.Concrete
 
         public void Inserir(T entidade)
         {
+            entidade.DataCriacao = DateTime.Now;
             Context.Entry(entidade).State = EntityState.Added;
             Context.SaveChanges();
         }

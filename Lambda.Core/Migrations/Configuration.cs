@@ -5,7 +5,7 @@ namespace Lambda.Core.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Lambda.Core.Repository.Configuration.LambdaContext>
+    public sealed class Configuration : DbMigrationsConfiguration<Lambda.Core.Repository.Configuration.LambdaContext>
     {
         public Configuration()
         {
