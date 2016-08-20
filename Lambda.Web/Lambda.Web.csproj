@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -115,6 +119,7 @@
     <Content Include="Images\gradient\index.php" />
     <Content Include="Images\invoice\index.php" />
     <Content Include="Images\jqueryui\index.php" />
+    <Content Include="Images\logo_lambda.png" />
     <Content Include="Images\pattern\index.php" />
     <Content Include="Images\Sorting icons.psd" />
     <Content Include="Images\superbox\index.php" />
@@ -754,7 +759,9 @@
     <Content Include="Scripts\smartadmin\plugin\x-editable\x-editable.min.js" />
     <Content Include="Scripts\smartadmin\smartwidgets\jarvis.widget.js" />
     <Content Include="Scripts\smartadmin\smartwidgets\jarvis.widget.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_ContentLayout.cshtml" />
     <Content Include="Views\Empresa\Index.cshtml" />
@@ -763,6 +770,7 @@
     <Content Include="Views\Empresa\Inserir.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -771,9 +779,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infraetrutura\CustomActionResult\RedirectResultComStatus.cs" />
+    <Compile Include="Infraetrutura\DependecyResolver\NinjectDependencyResolver.cs" />
+    <Compile Include="Infraetrutura\FilterProvider\FilterProviderCustom.cs" />
+    <Compile Include="Infraetrutura\Filtros\AutorizacaoAttribute.cs" />
     <Compile Include="Infraetrutura\Helpers\Enum\TextBoxType.cs" />
     <Compile Include="Infraetrutura\Helpers\LambdaHelperFactory.cs" />
     <Compile Include="Infraetrutura\Helpers\LambdaHelpers.cs" />
+    <Compile Include="Infraetrutura\Provider\Abstract\IAutenticacaoProvider.cs" />
+    <Compile Include="Infraetrutura\Provider\Concrete\AutenticacaoProvider.cs" />
+    <Compile Include="Infraetrutura\Utils\Serializador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Lambda.Core.Business.Abstract;
 using Lambda.Core.DTO;
 using Lambda.Core.Entities;
 
@@ -10,10 +11,11 @@ namespace Lambda.Web.Controllers
 {
     public class EmpresaController : Controller
     {
-        // GET: Empresa
+        public IBusiness<Empresa> EmpresaBusiness { get; set; } 
         public ActionResult Index()
         {
-            return View();
+            var listaEmpresas = EmpresaBusiness.Consulta.ToList();
+            return View(listaEmpresas);
         }
 
         public ActionResult Inserir()

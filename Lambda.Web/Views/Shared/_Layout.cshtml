@@ -2,17 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-    <title> SmartAdmin </title>
+    <title>Lambda SmartAdmin </title>
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <!-- Use the correct meta names below for your web application
-         Ref: http://davidbcalhoun.com/2010/viewport-metatag
-
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">-->
+ 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -24,13 +18,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="~/Content/smartadmin/css/smartadmin-production_unminified.css">
     <link href="~/Content/smartadmin/css/lambda_style.css" rel="stylesheet" />
 
-    <!-- SmartAdmin RTL Support is under construction
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/smartadmin/css/smartadmin-rtl.css"> -->
-    <!-- We recommend you use "your_style.css" to override SmartAdmin
-    specific styles this will also ensure you retrain your customization
-    with each SmartAdmin update.
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/smartadmin/css/demo.css"> -->
-    <!-- FAVICONS -->
+
     <link rel="shortcut icon" href="~/Images/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="~/Images/favicon/favicon.ico" type="image/x-icon">
 
@@ -150,7 +138,7 @@
                 <!-- User image size is adjusted inside CSS, it should stay as it -->
                 <img src="~/Images/avatars/male.png" alt="me" class="online" />
                 <a href="javascript:void(0);" id="show-shortcut">
-                    @*@RenderSection("usuarioLogado", true) <i class="fa fa-angle-down"></i>*@
+                    @RenderSection("usuarioLogado", true) <i class="fa fa-angle-down"></i>
                 </a>
             </span>
         </div>

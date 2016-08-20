@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +60,7 @@
     <Compile Include="Business\Concrete\EmpresaBusiness.cs" />
     <Compile Include="Business\Concrete\UsuarioBusiness.cs" />
     <Compile Include="DI\LambdaNinjectModule.cs" />
+    <Compile Include="DTO\AutenticacaoModel.cs" />
     <Compile Include="DTO\ResultadoSimplesDTO.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\EntidadeBase.cs" />
@@ -71,6 +73,10 @@
     <Compile Include="Migrations\201608201131528_v2DB.cs" />
     <Compile Include="Migrations\201608201131528_v2DB.Designer.cs">
       <DependentUpon>201608201131528_v2DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608202337438_v3DB.cs" />
+    <Compile Include="Migrations\201608202337438_v3DB.Designer.cs">
+      <DependentUpon>201608202337438_v3DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608201131528_v2DB.resx">
       <DependentUpon>201608201131528_v2DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608202337438_v3DB.resx">
+      <DependentUpon>201608202337438_v3DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

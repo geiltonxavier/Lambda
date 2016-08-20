@@ -1,7 +1,10 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+@section usuarioLogado
+{
+    @ViewBag.UsuarioLogado.Substring(0, @ViewBag.UsuarioLogado.Length > 12 ? 12 : @ViewBag.UsuarioLogado.Length)
+}

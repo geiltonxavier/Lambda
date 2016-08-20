@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Lambda.Web.App_Start;
+using Lambda.Web.Infraetrutura.DependecyResolver;
+using Lambda.Web.Infraetrutura.FilterProvider;
 
 namespace Lambda.Web
 {
@@ -12,7 +15,12 @@ namespace Lambda.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            DependencyResolver.SetResolver(new NinjectDependencyResolver());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            FilterProviders.Providers.Clear();
+            FilterProviders.Providers.Add(new FilterProviderCustom());
+
         }
     }
 }
