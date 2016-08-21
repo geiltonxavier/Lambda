@@ -6,12 +6,16 @@ using System.Web.Mvc;
 using Lambda.Core.Business.Abstract;
 using Lambda.Core.DTO;
 using Lambda.Core.Entities;
+using Ninject;
 
 namespace Lambda.Web.Controllers
 {
     public class EmpresaController : Controller
     {
+        [Inject]
         public IBusiness<Empresa> EmpresaBusiness { get; set; } 
+
+
         public ActionResult Index()
         {
             var listaEmpresas = EmpresaBusiness.Consulta.ToList();
