@@ -13667,7 +13667,7 @@ label:hover input[type="checkbox"][disabled].checkbox:checked + span:before {
     font-size: 18px;
 }
 #login #header #logo img {
-  width: 70px;
+  width: 25px;
 
 }
 #login-header-space {
