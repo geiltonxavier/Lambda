@@ -1,13 +1,53 @@
-﻿
+﻿@model List<Lambda.Core.Entities.Empresa>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ContentLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Listagem das empresas</h2>
+
 
 @section headerWidget
 {
-    <span class="widget-icon"><i class="fa fa-building"></i></span>
-    <h2>Enpresa</h2>
+    <span class="widget-icon"> <i class="fa fa-building"></i> </span>
+    <h2>Empresa </h2>
 }
+<header>
+    <a class="btn btn-primary btn-sm" href="#/Empresa/Inserir"><i class="fa fa-plus"></i>&nbsp;Inserir</a>
+</header>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Ação</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Data de Fundação</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empresa in Model)
+        {
+            <tr>
+                <td>
+                    @Html.Lambda().ImageActionLink("fa fa-edit", "Editar", "Editar", "Empresa", new { id = @empresa.Id })
+                    |
+                    @Html.Lambda().ImageActionLink("fa fa-times-circle", "Excluir", "", "", null,
+                 new { onclick = "excluirEmpresa('" + @empresa.Id + "');" })
+                </td>
+                <td>@empresa.Nome</td>
+                <td>@empresa.Telefone</td>
+                <td>
+                    @if (empresa.DataFundacao.HasValue)
+                    {
+                        @empresa.DataFundacao.Value.ToShortDateString()
+                    }
+                    else
+                    {
+                        @Html.Raw("-")
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

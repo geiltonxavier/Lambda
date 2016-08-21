@@ -11,7 +11,7 @@ using Ninject;
 
 namespace Lambda.Web.Infraetrutura.Filtros
 {
-    public class AutorizacaoAttribute : AuthorizeAttribute
+    public class    AutorizacaoAttribute : AuthorizeAttribute
     {
         [Inject]
         public IAutenticacaoProvider AutenticacaoProvider { get; set; }

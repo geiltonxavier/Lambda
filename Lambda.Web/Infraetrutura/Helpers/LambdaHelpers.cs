@@ -83,5 +83,54 @@ namespace Lambda.Web.Infraetrutura.Helpers
 
             return MvcHtmlString.Create(htmlRetorno);
         }
+        public IHtmlString ImageActionLink(string sIcon, string linkName, string actionName, string controllerName,
+            object routeValues, object htmlAttributes = null)
+        {
+            var attributes = new RouteValueDictionary(htmlAttributes);
+            var iconBuilder = new TagBuilder("i");
+            iconBuilder.MergeAttribute("class", sIcon);
+            var urlHelper = new UrlHelper(htmlHelper.ViewContext.RequestContext, htmlHelper.RouteCollection);
+            var linkBuilder = new TagBuilder("a");
+            var href = "#" + urlHelper.Action(actionName, controllerName, routeValues);
+
+            if (attributes.ContainsKey("onclick"))
+                href = "javascript:void(0)";
+
+            linkBuilder.MergeAttribute("href", href);
+            linkBuilder.InnerHtml += iconBuilder;
+            linkBuilder.InnerHtml += linkName;
+            linkBuilder.MergeAttributes(attributes, true);
+            return MvcHtmlString.Create(linkBuilder.ToString());
+
+        }
+
+        public IHtmlString DropDownList(string id, IEnumerable<SelectListItem> selectList,
+            bool exibirMsgValidation = true,
+            string optionLabel = null, object htmlAttributes = null)
+        {
+            var labelBuilder = new TagBuilder("label");
+            labelBuilder.MergeAttribute("class", "select");
+
+            var dropDownListHelper = htmlHelper.DropDownList(id, selectList, optionLabel, htmlAttributes);
+            var iconArrow = new TagBuilder("i");
+            labelBuilder.InnerHtml += dropDownListHelper + iconArrow.ToString();
+
+            var tagMsgValidation = string.Empty;
+
+            if (!htmlHelper.ViewData.ModelState.IsValidField(id))
+            {
+                labelBuilder.AddCssClass("state-error");
+
+                if (exibirMsgValidation)
+                {
+                    var validationBuilder = htmlHelper.ValidationMessage(id).ToString().Replace("span", "em");
+                    tagMsgValidation += validationBuilder.ToString();
+                }
+            }
+
+            var htmlRetorno = labelBuilder + tagMsgValidation;
+
+            return MvcHtmlString.Create(htmlRetorno);
+        }
     }
 }

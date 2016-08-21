@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Lambda.Core.DTO;
+using Lambda.Core.Entities.Enum;
+using Lambda.Web.Infraetrutura.Filtros;
 using Lambda.Web.Infraetrutura.Provider.Abstract;
 using Ninject;
 
 namespace Lambda.Web.Controllers
 {
+    [Autorizacao(Grupo.Admin)]
     public class LoginController : Controller
     {
         [Inject]
