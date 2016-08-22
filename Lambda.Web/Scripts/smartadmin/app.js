@@ -568,7 +568,7 @@ function runAllForms() {
 		$('[data-mask]').each(function() {
 
 			$this = $(this);
-			var mask = $this.attr('data-mask') || 'error...', mask_placeholder = $this.attr('data-mask-placeholder') || '';
+			var mask = $this.attr('data-mask') || 'error...', mask_placeholder = $this.attr('data-mask-placeholder') || '0';
 
 			$this.mask(mask, {
 				placeholder : mask_placeholder

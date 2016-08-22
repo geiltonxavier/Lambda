@@ -26,7 +26,8 @@ namespace Lambda.Core.Entities
         public bool Ativo { get; set; }
 
         [DisplayName("Data de Fundação")]
-        public DateTime? DataFundacao { get; set; }
+        [Required(ErrorMessage = "Informe a Data de Fundação")]
+        public DateTime DataFundacao { get; set; }
 
     }
 }

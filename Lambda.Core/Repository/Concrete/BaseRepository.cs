@@ -2,11 +2,9 @@
 using Lambda.Core.Repository.Abstract;
 using Lambda.Core.Repository.Configuration;
 using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+using System.Collections.Generic;using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Lambda.Core.Repository.Concrete
 {
@@ -37,7 +35,8 @@ namespace Lambda.Core.Repository.Concrete
 
         public void Inserir(T entidade)
         {
-            entidade.DataCriacao = DateTime.Now;
+
+            entidade.DataCriacao =  DateTime.Now;
             Context.Entry(entidade).State = EntityState.Added;
             Context.SaveChanges();
         }
@@ -54,3 +53,4 @@ namespace Lambda.Core.Repository.Concrete
         }
     }
 }
+

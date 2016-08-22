@@ -11,7 +11,7 @@ using Ninject;
 
 namespace Lambda.Web.Controllers
 {
-    [Autorizacao(Grupo.Admin)]
+    
     public class LoginController : Controller
     {
         [Inject]

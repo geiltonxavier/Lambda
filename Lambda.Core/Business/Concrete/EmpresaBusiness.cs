@@ -18,5 +18,6 @@ namespace Lambda.Core.Business.Concrete
             }
             base.Inserir(empresa);
         }
+
     }
 }

@@ -19,6 +19,8 @@ namespace Lambda.Core.Entities
         }
 
         public DateTime DataCriacao { get; set; }
+
+        public DateTime? DataExclusao { get; set; }
         
 
     }

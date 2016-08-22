@@ -812,6 +812,7 @@
     <Content Include="Scripts\smartadmin\plugin\datatables\media\js\TableTools.min.js.gz" />
     <Content Include="Scripts\smartadmin\plugin\slickgrid\slick.editors.js--" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Empresa\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
