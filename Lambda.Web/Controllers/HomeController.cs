@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Lambda.Web.Infraetrutura.Filtros;
-using Lambda.Web.Infraetrutura.Provider.Abstract;
+using Lambda.Web.Infraestrutura.Filtros;
+using Lambda.Web.Infraestrutura.Provider.Abstract;
 using Ninject;
 
 namespace Lambda.Web.Controllers

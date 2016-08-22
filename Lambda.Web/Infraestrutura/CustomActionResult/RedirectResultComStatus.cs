@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace Lambda.Web.Infraetrutura.CustomActionResult
+namespace Lambda.Web.Infraestrutura.CustomActionResult
 {
     public class RedirectResultComStatus : ActionResult
     {

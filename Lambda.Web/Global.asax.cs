@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Lambda.Web.App_Start;
-using Lambda.Web.Infraetrutura.DependecyResolver;
-using Lambda.Web.Infraetrutura.FilterProvider;
+using Lambda.Web.Infraestrutura.DependecyResolver;
+using Lambda.Web.Infraestrutura.FilterProvider;
 
 namespace Lambda.Web
 {

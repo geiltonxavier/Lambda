@@ -5,11 +5,11 @@ using System.Web;
 using System.Web.Security;
 using Lambda.Core.Business.Abstract;
 using Lambda.Core.DTO;
-using Lambda.Web.Infraetrutura.Provider.Abstract;
-using Lambda.Web.Infraetrutura.Utils;
+using Lambda.Web.Infraestrutura.Provider.Abstract;
+using Lambda.Web.Infraestrutura.Utils;
 using Ninject;
 
-namespace Lambda.Web.Infraetrutura.Provider.Concrete
+namespace Lambda.Web.Infraestrutura.Provider.Concrete
 {
     public class AutenticacaoProvider : IAutenticacaoProvider
     {

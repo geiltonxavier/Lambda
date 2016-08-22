@@ -7,7 +7,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using Lambda.Core.DTO;
 
-namespace Lambda.Web.Infraetrutura.Utils
+namespace Lambda.Web.Infraestrutura.Utils
 {
     public class Serializador
     {

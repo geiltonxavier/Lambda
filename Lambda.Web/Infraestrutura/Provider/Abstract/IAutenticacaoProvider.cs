@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Lambda.Core.DTO;
 
-namespace Lambda.Web.Infraetrutura.Provider.Abstract
+namespace Lambda.Web.Infraestrutura.Provider.Abstract
 {
     public interface IAutenticacaoProvider
     {

@@ -1,14 +1,49 @@
-﻿
+﻿@using Lambda.Web.Infraestrutura.Helpers
+@model List<Lambda.Core.Entities.Usuario>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ContentLayout.cshtml";
 }
 
+
 <h2>Index</h2>
+Listagem dos usuários
+
 
 @section headerWidget
 {
-    <span class="widget-icon"><i class="fa fa-user"></i></span>
+    <span class="widget-icon"> <i class="fa fa-user"></i> </span>
     <h2>Usuário</h2>
 }
 
+<header>
+    <a class="btn btn-primary btn-sm" href="#/Usuario/Inserir"><i class="fa fa-plus"></i>&nbsp;Inserir</a>
+</header>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Login</th>
+            <th>Grupo</th>
+            <th>Cadastro</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Login</td>
+                <td>@usuario.Grupo</td>
+                <td>@usuario.DataCriacao.ToShortDateString()</td>
+                <td>
+                    @Html.Lambda().ImageActionLink("fa fa-edit", "Editar", "Editar", "Usuario", new { id = usuario.Id })
+                    |
+                    @Html.Lambda().ImageActionLink("fa fa-times-circle", "Excluir", "", "", null, new { onclick = "excluirUsuario('" + usuario.Id + "');" })
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

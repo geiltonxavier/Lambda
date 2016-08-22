@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using Lambda.Web.Infraetrutura.DependecyResolver;
+using Lambda.Web.Infraestrutura.DependecyResolver;
 
-namespace Lambda.Web.Infraetrutura.FilterProvider
+namespace Lambda.Web.Infraestrutura.FilterProvider
 {
     public class FilterProviderCustom : FilterAttributeFilterProvider
     {

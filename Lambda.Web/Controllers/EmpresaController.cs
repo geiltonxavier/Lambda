@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Lambda.Core.Business.Abstract;
 using Lambda.Core.DTO;
 using Lambda.Core.Entities;
-using Lambda.Web.Infraetrutura.Filtros;
+using Lambda.Web.Infraestrutura.Filtros;
 using Ninject;
 
 namespace Lambda.Web.Controllers

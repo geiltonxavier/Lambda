@@ -772,16 +772,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infraetrutura\CustomActionResult\RedirectResultComStatus.cs" />
-    <Compile Include="Infraetrutura\DependecyResolver\NinjectDependencyResolver.cs" />
-    <Compile Include="Infraetrutura\FilterProvider\FilterProviderCustom.cs" />
-    <Compile Include="Infraetrutura\Filtros\AutorizacaoAttribute.cs" />
-    <Compile Include="Infraetrutura\Helpers\Enum\TextBoxType.cs" />
-    <Compile Include="Infraetrutura\Helpers\LambdaHelperFactory.cs" />
-    <Compile Include="Infraetrutura\Helpers\LambdaHelpers.cs" />
-    <Compile Include="Infraetrutura\Provider\Abstract\IAutenticacaoProvider.cs" />
-    <Compile Include="Infraetrutura\Provider\Concrete\AutenticacaoProvider.cs" />
-    <Compile Include="Infraetrutura\Utils\Serializador.cs" />
+    <Compile Include="Infraestrutura\CustomActionResult\RedirectResultComStatus.cs" />
+    <Compile Include="Infraestrutura\DependecyResolver\NinjectDependencyResolver.cs" />
+    <Compile Include="Infraestrutura\Extension\EnumExtension.cs" />
+    <Compile Include="Infraestrutura\FilterProvider\FilterProviderCustom.cs" />
+    <Compile Include="Infraestrutura\Filtros\AutorizacaoAttribute.cs" />
+    <Compile Include="Infraestrutura\Helpers\Enum\TextBoxType.cs" />
+    <Compile Include="Infraestrutura\Helpers\LambdaHelperFactory.cs" />
+    <Compile Include="Infraestrutura\Helpers\LambdaHelpers.cs" />
+    <Compile Include="Infraestrutura\Provider\Abstract\IAutenticacaoProvider.cs" />
+    <Compile Include="Infraestrutura\Provider\Concrete\AutenticacaoProvider.cs" />
+    <Compile Include="Infraestrutura\Utils\Serializador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -813,6 +814,8 @@
     <Content Include="Scripts\smartadmin\plugin\slickgrid\slick.editors.js--" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Empresa\Editar.cshtml" />
+    <Content Include="Views\Usuario\Inserir.cshtml" />
+    <Content Include="Views\Usuario\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

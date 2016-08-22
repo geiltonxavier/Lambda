@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
-using Lambda.Web.Infraetrutura.Helpers.Enum;
+using Lambda.Web.Infraestrutura.Helpers.Enum;
 
-namespace Lambda.Web.Infraetrutura.Helpers
+namespace Lambda.Web.Infraestrutura.Helpers
 {
     public class LambdaHelpers
     {
@@ -17,7 +15,7 @@ namespace Lambda.Web.Infraetrutura.Helpers
             htmlHelper = helperParam;
         }
 
-        public IHtmlString Textbox(string id, TextBoxType type = TextBoxType.Texto, bool exibirMensagemDeValidacao = true, object htmlAttribures = null)
+        public IHtmlString TextBox(string id, TextBoxType type = TextBoxType.Texto, bool exibirMensagemDeValidacao = true, object htmlAttribures = null)
         {
             var attributes = new RouteValueDictionary(htmlAttribures);
 

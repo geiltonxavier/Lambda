@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Lambda.Core.Entities.Enum;
-using Lambda.Web.Infraetrutura.CustomActionResult;
-using Lambda.Web.Infraetrutura.Provider.Abstract;
+using Lambda.Web.Infraestrutura.CustomActionResult;
+using Lambda.Web.Infraestrutura.Provider.Abstract;
 using Ninject;
 
-namespace Lambda.Web.Infraetrutura.Filtros
+namespace Lambda.Web.Infraestrutura.Filtros
 {
     public class    AutorizacaoAttribute : AuthorizeAttribute
     {

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Lambda.Core.DI;
-using Lambda.Web.Infraetrutura.Provider.Abstract;
-using Lambda.Web.Infraetrutura.Provider.Concrete;
+using Lambda.Web.Infraestrutura.Provider.Abstract;
+using Lambda.Web.Infraestrutura.Provider.Concrete;
 using Ninject;
 
-namespace Lambda.Web.Infraetrutura.DependecyResolver
+namespace Lambda.Web.Infraestrutura.DependecyResolver
 {
     public class NinjectDependencyResolver : IDependencyResolver
     {

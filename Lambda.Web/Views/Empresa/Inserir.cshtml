@@ -1,4 +1,5 @@
-﻿@using Lambda.Web.Infraetrutura.Helpers.Enum
+﻿@using Lambda.Web.Infraestrutura.Helpers
+@using Lambda.Web.Infraestrutura.Helpers.Enum
 @model Lambda.Core.Entities.Empresa
 @{
     ViewBag.Title = "Inserir";
@@ -20,23 +21,23 @@
         <div class="row">
             <section class="col col-6">
                 @Html.DisplayNameFor(e => e.Nome)
-                @Html.Lambda().Textbox("Nome", TextBoxType.Nome)
+                @Html.Lambda().TextBox("Nome", TextBoxType.Nome)
             </section>
             <section class="col col-6">
                 @Html.DisplayNameFor(e => e.NomeFantasia)
-                @Html.Lambda().Textbox("NomeFantasia")
+                @Html.Lambda().TextBox("NomeFantasia")
             </section>
             <section class="col col-6">
                 @Html.DisplayNameFor(e => e.Telefone)
-                @Html.Lambda().Textbox("Telefone", TextBoxType.Telefone)
+                @Html.Lambda().TextBox("Telefone", TextBoxType.Telefone)
             </section>
             <section class="col col-6">
                 @Html.DisplayNameFor(e => e.CNPJ)
-                @Html.Lambda().Textbox("CNPJ", TextBoxType.CNPJ)
+                @Html.Lambda().TextBox("CNPJ", TextBoxType.CNPJ)
             </section>
             <section class="col col-6">
                 @Html.DisplayNameFor(e => e.DataFundacao)
-                @Html.Lambda().Textbox("DataFundacao", TextBoxType.Data)
+                @Html.Lambda().TextBox("DataFundacao", TextBoxType.Data)
             </section>
             <section class="col col-6">
                 @Html.DisplayNameFor(e => e.Ativo)

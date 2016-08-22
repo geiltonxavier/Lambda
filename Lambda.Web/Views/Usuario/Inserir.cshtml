@@ -1,0 +1,49 @@
+﻿@using Lambda.Web.Infraestrutura.Helpers
+@using Lambda.Web.Infraestrutura.Helpers.Enum
+@model Lambda.Core.Entities.Usuario
+@{
+    ViewBag.Title = "Inserir";
+    Layout = "~/Views/Shared/_ContentLayout.cshtml";
+}
+@section headerWidget
+{
+    <span class="widget-icon"> <i class="fa fa-user"></i> </span>
+    <h2>Inserir Usuário</h2>
+    &nbsp;&nbsp;<i id="divLoading" style="display: none" class="fa fa-cog fa-2x fa-spin"></i>
+}
+
+@using (Ajax.BeginForm("Inserir", "Usuario", new AjaxOptions()
+{
+    HttpMethod = "Post",
+    LoadingElementId = "divLoading",
+    InsertionMode = InsertionMode.Replace,
+    OnSuccess = "onSucessoUsuario"
+},
+    new { @class = "smart-form" }))
+{
+    <fieldset>
+        <div class="row">
+            <section class="col col-6">
+                @Html.DisplayNameFor(e => e.Nome)
+                @Html.Lambda().TextBox("Nome", TextBoxType.Nome)
+            </section>
+            <section class="col col-6">
+                @Html.DisplayNameFor(e => e.Login)
+                @Html.Lambda().TextBox("Login")
+            </section>
+        </div>
+        <div class="row">
+            <section class="col col-6">
+                @Html.DisplayNameFor(e => e.Senha)
+                @Html.Lambda().TextBox("Senha", TextBoxType.Senha)
+            </section>
+            <section class="col col-6">
+                @Html.DisplayNameFor(e => e.Grupo)
+                @Html.Lambda().DropDownList("Grupo", ViewBag.Grupo)
+            </section>
+        </div>
+    </fieldset>
+    <footer>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </footer>
+}
